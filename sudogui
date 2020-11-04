@@ -1,0 +1,14 @@
+#!/bin/bash
+pass=$(yad --entry  --title="输入密码_dialog" --hide-text  --button="取消:1"  --button="完成:2"  )
+echo $?
+[[ $? -eq 1 ]] && exit 0
+
+if [ $# -gt 0 ]; then
+        echo "参数个数为$#个";
+else
+        echo "没有参数!";
+        exit 0
+
+fi
+#stat app
+echo  $pass |sudo -S  $1 $2 $3 $4 $5 $6  $7  $8  $9
