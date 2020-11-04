@@ -1,0 +1,2 @@
+# sudoGui
+sudo   gui 
